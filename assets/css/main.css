@@ -719,6 +719,8 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+  /* Optional: constrain its width so it never spans full */
+  max-width: 90%;
 }
 
 .hero h2 {
@@ -728,7 +730,7 @@ section,
 }
 
 .hero p {
-  margin: 5px 0 0 0;
+  margin: 5px 0 0;
   font-size: 26px;
 }
 
@@ -759,15 +761,67 @@ section,
   background-color: var(--accent-color);
 }
 
+/*--------------------------------------------------------------
+# Responsive “Bleed” & Layout Tweaks
+--------------------------------------------------------------*/
+
+/* Large desktops/tablets */
+@media (max-width: 1200px) {
+  .hero img {
+    height: 120%;   /* even more bleed on big screens */
+  }
+}
+
+/* Standard tablets/small desktops */
+@media (max-width: 992px) {
+  .hero img {
+    height: 110%;
+  }
+
+    .hero h2 {
+    font-size: 48px;
+  }
+
+}
+
+/* Mobile */
 @media (max-width: 768px) {
+  .hero {
+    padding: 40px 0;
+    justify-content: flex-end; /* container on the right */
+  }
+
+  .hero img {
+    /* show a crop point 75% across, 50% down */
+    object-position: 70% center;
+  }
+
+  .hero .container {
+    /* keep it snug against the right edge */
+    padding-right: 0px;
+    padding-left: 200px;
+    text-align: left;        /* align the headings & text to the right */
+  }
+
   .hero h2 {
-    font-size: 32px;
+    font-size: 25px;
   }
 
   .hero p {
-    font-size: 20px;
+    font-size: 15px;
+  }
+
+  .hero .social-links {
+    justify-content: flex-end; /* if using flex, push icons right */
+  }
+
+  .hero .social-links a {
+    margin-left: 0px;         /* space icons from each other */
+    margin-right: 0;
   }
 }
+
+
 
 /*--------------------------------------------------------------
 # About Section
