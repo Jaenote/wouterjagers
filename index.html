@@ -58,16 +58,29 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-bg9.png" alt="" data-aos="fade-in">
+      <picture>
+        <!-- Mobile first: when viewport ≤768px, use the mobile image -->
+        <source 
+          srcset="assets/img/hero-bg9-mobile.png" 
+          media="(max-width: 768px)">
+        <!-- Fallback / default (desktop) -->
+        <img 
+          src="assets/img/hero-bg9.png" 
+          alt="" 
+          data-aos="fade-in">
+      </picture>
 
       <div class="container" data-aos="zoom-out" data-aos-delay="100">
         <h2>Wouter Jagers</h2>
-        <p>I'm <span class="typed" data-typed-items="your Business Analyst, your Software Developer, your Process Engineer, your Data Specialist"></span><span class="typed-cursor typed-cursor--blink"></span></p>
+        <p>
+          I’m <span class="typed" 
+                  data-typed-items="your Business Analyst, your Software Developer, your Process Engineer, your Data Specialist">
+              </span><span class="typed-cursor typed-cursor--blink"></span>
+        </p>
         <div class="social-links">
-          <!-- <a href="#"><i class="bi bi-twitter-x"></i></a>
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-instagram"></i></a> -->
-          <a href="https://www.linkedin.com/in/wouter-jagers/"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/wouter-jagers/">
+            <i class="bi bi-linkedin"></i>
+          </a>
         </div>
       </div>
 
