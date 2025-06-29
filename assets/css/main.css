@@ -799,16 +799,16 @@ section,
   .hero .container {
     /* keep it snug against the right edge */
     padding-right: 0px;
-    padding-left: 200px;
+    padding-left: 125px;
     text-align: left;        /* align the headings & text to the right */
   }
 
   .hero h2 {
-    font-size: 25px;
+    font-size: 24px;
   }
 
   .hero p {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .hero .social-links {
