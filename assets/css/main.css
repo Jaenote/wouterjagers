@@ -719,8 +719,6 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
-  /* Optional: constrain its width so it never spans full */
-  max-width: 90%;
 }
 
 .hero h2 {
@@ -730,7 +728,7 @@ section,
 }
 
 .hero p {
-  margin: 5px 0 0;
+  margin: 5px 0 0 0;
   font-size: 26px;
 }
 
