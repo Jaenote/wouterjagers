@@ -4,7 +4,7 @@
  */
 document.addEventListener("DOMContentLoaded", () => {
   // 1) Fetch and inject navbar.html
-  fetch("navbar.html")
+  fetch("../navbar.html")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Could not load navbar.html");
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   // 2) Fetch and inject footer.html (no special event‐binding needed here)
-  fetch("footer.html")
+  fetch("../footer.html")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Could not load footer.html");
